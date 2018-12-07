@@ -4,6 +4,13 @@ public class MyApp {
 	public static void main(String[] args) {
 		//m1(); //appel de m1();
 		m2(); //appel de m2();
+		m3();
+	}
+	
+	public static void m3() {
+		Adresse adr1 = new Adresse("12 rue elle " , "75012" , "Paris");
+		adr1.setCodePostal("75013");
+		System.out.println("adr1="+adr1);
 	}
 	
 	public static void m2() {
