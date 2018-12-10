@@ -2306,7 +2306,7 @@
 											"top": 294,
 											"width": 106.91357421875,
 											"height": 13,
-											"text": "-glissière",
+											"text": "-glissière: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2323,7 +2323,7 @@
 											"top": 309,
 											"width": 106.91357421875,
 											"height": 13,
-											"text": "-translation",
+											"text": "-translation: int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2497,7 +2497,7 @@
 											"font": "Arial;13;1",
 											"left": 373,
 											"top": 263,
-											"width": 113.80712890625,
+											"width": 137.29345703125,
 											"height": 13,
 											"text": "PortePivotante"
 										},
@@ -2532,7 +2532,7 @@
 									"font": "Arial;13;0",
 									"left": 368,
 									"top": 256,
-									"width": 123.80712890625,
+									"width": 147.29345703125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFnmBZM5IYt5ms="
@@ -2569,9 +2569,9 @@
 											"font": "Arial;13;0",
 											"left": 373,
 											"top": 286,
-											"width": 113.80712890625,
+											"width": 137.29345703125,
 											"height": 13,
-											"text": "-axe_pivotement",
+											"text": "-axe_pivotement: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2586,16 +2586,16 @@
 											"font": "Arial;13;0",
 											"left": 373,
 											"top": 301,
-											"width": 113.80712890625,
+											"width": 137.29345703125,
 											"height": 13,
-											"text": "-angle_rotation",
+											"text": "-angle_rotation: int",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 368,
 									"top": 281,
-									"width": 123.80712890625,
+									"width": 147.29345703125,
 									"height": 38
 								},
 								{
@@ -2620,7 +2620,7 @@
 											"font": "Arial;13;0",
 											"left": 373,
 											"top": 324,
-											"width": 113.80712890625,
+											"width": 137.29345703125,
 											"height": 13,
 											"text": "+fairePivoter(angle)",
 											"horizontalAlignment": 0
@@ -2637,7 +2637,7 @@
 											"font": "Arial;13;0",
 											"left": 373,
 											"top": 339,
-											"width": 113.80712890625,
+											"width": 137.29345703125,
 											"height": 13,
 											"text": "+ouvrir()",
 											"horizontalAlignment": 0
@@ -2654,7 +2654,7 @@
 											"font": "Arial;13;0",
 											"left": 373,
 											"top": 354,
-											"width": 113.80712890625,
+											"width": 137.29345703125,
 											"height": 13,
 											"text": "+fermer()",
 											"horizontalAlignment": 0
@@ -2663,7 +2663,7 @@
 									"font": "Arial;13;0",
 									"left": 368,
 									"top": 319,
-									"width": 123.80712890625,
+									"width": 147.29345703125,
 									"height": 53
 								},
 								{
@@ -2703,7 +2703,7 @@
 							"containerChangeable": true,
 							"left": 368,
 							"top": 256,
-							"width": 123.80712890625,
+							"width": 147.29345703125,
 							"height": 116,
 							"nameCompartment": {
 								"$ref": "AAAAAAFnmBZM5IYsUl8="
@@ -2836,7 +2836,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 369,
+									"left": 374,
 									"top": 212,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2857,8 +2857,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 355,
-									"top": 218,
+									"left": 361,
+									"top": 219,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2878,7 +2878,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 396,
+									"left": 401,
 									"top": 199,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -2897,7 +2897,7 @@
 								"$ref": "AAAAAAFnmBZM5IYrWeY="
 							},
 							"lineStyle": 1,
-							"points": "403:255;363:169",
+							"points": "411:255;366:169",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFnmBgbY4bAm4s="
@@ -2945,8 +2945,8 @@
 								"$ref": "AAAAAAFnmBWRN4XRawI="
 							},
 							"font": "Arial;13;0",
-							"left": 64,
-							"top": 392,
+							"left": 56,
+							"top": 400,
 							"width": 193,
 							"height": 68,
 							"text": "ouvrir() appel en interne faireGlisser(80);\nfermer() appel en interne\nfaireGlisser(0);"
@@ -2965,7 +2965,7 @@
 								"$ref": "AAAAAAFnmJilzUozFAw="
 							},
 							"lineStyle": 1,
-							"points": "158:391;157:380"
+							"points": "152:399;152:380"
 						},
 						{
 							"_type": "UMLNoteView",
@@ -2974,11 +2974,11 @@
 								"$ref": "AAAAAAFnmBWRN4XRawI="
 							},
 							"font": "Arial;13;0",
-							"left": 272,
+							"left": 328,
 							"top": 400,
 							"width": 257,
 							"height": 65,
-							"text": "ouvrir() appel en interne faireGlisser(80);\nfermer() appel en interne\nfaireGlisser(0);"
+							"text": "ouvrir() appel en interne fairePivoter(90);\nfermer() appel en interne\nfairePivoter(0);"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -2994,7 +2994,7 @@
 								"$ref": "AAAAAAFnmJozjkpCmls="
 							},
 							"lineStyle": 1,
-							"points": "408:399;415:372"
+							"points": "452:399;448:372"
 						}
 					]
 				},
@@ -3070,7 +3070,7 @@
 							},
 							"name": "glissière",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3080,7 +3080,7 @@
 							},
 							"name": "translation",
 							"visibility": "private",
-							"type": ""
+							"type": "int"
 						}
 					],
 					"operations": [
@@ -3152,7 +3152,7 @@
 							},
 							"name": "axe_pivotement",
 							"visibility": "private",
-							"type": ""
+							"type": "String"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3162,7 +3162,7 @@
 							},
 							"name": "angle_rotation",
 							"visibility": "private",
-							"type": ""
+							"type": "int"
 						}
 					],
 					"operations": [
