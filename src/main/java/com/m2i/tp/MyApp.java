@@ -1,12 +1,28 @@
 package com.m2i.tp;
 
 public class MyApp {
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 		//m1(); //appel de m1();
 		//m2(); //appel de m2();
 		//m3();
 		m4();
 		m5();
+		MyApp myApp = new MyApp();
+		myApp.m6();
+	}
+	
+	public void m6() {
+		//pythagore
+		double largeur=4;
+		double longeur=6;
+		double hypothenuse = Math.sqrt( Math.pow(largeur, 2) + Math.pow(longeur, 2));
+		System.out.println("hypothenuse=" + hypothenuse);
+		System.out.println("PI="+Math.PI);
 	}
 	
 	public static void m4() {
@@ -25,7 +41,7 @@ public class MyApp {
 		String ch2Bis; // construire ch2Bis en fonction de ch2
 		               // en transformant le premier caractère en majuscule
 		ch2Bis=ch2.substring(0,1).toUpperCase()+ch2.substring(1,ch2.length());
-		System.out.println("ch2Bis="+ch2Bis);
+		MyUtil.afficher("ch2Bis="+ch2Bis);
 	}
 	
 	public static void m5() {
