@@ -15,13 +15,16 @@ public class Employe extends Personne {
 		salaire = (int) ( (double) salaire * (1 + (pourcentage / 100))); 
 	}
 	
+	
+	@Override
 	public String toString() {
 		return "Employe avec salaire=" + salaire  + " heritant de " + super.toString();
 	}
+
+	
 	
 	public Employe() {
-		super();//pour un homme ordinaire l'essence c'est super !!!
-		        //citation de "looping" (agence tout risque)
+		super();
 	}
 
 	public Employe(String nom, String prenom, Integer salaire) {
