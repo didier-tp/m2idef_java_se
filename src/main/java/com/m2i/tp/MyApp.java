@@ -6,11 +6,37 @@ public class MyApp {
 		//m1(); //appel de m1();
 		//m2(); //appel de m2();
 		//m3();
-		m4();
-		m5();
-		MyApp myApp = new MyApp();
-		myApp.m6();
-	    m7();
+		//m4();
+		//m5();
+		//MyApp myApp = new MyApp();
+		//myApp.m6();
+	    //m7();
+	    m8();
+	}
+	
+	public static void m8() {
+		Employe e1 = new Employe();
+		e1.setNom("toto");
+		e1.setSalaire(2000);
+		e1.augmenterSalaire(5.0);//+5%
+		System.out.println("e1="+e1.toString());
+		
+		Employe e2 = new Employe("Therieur" , "alain" , 2500);
+		System.out.println("e2="+e2.toString());
+		
+		Personne pp = new Personne();
+		pp.setNom("papy");
+		
+		Personne p = null;
+		p=pp;
+		System.out.println("p="+p.toString());
+		p=e1;
+		System.out.println("p="+p.toString());
+		if(p instanceof Employe) {
+			((Employe) p).augmenterSalaire(3.0);
+			System.out.println("p="+p.toString());
+			}
+		
 	}
 	
 	public static void m7() {
