@@ -2,10 +2,6 @@ package com.m2i.tp;
 
 public class MyApp {
 	
-	
-	
-	
-	
 	public static void main(String[] args) {
 		//m1(); //appel de m1();
 		//m2(); //appel de m2();
@@ -14,8 +10,15 @@ public class MyApp {
 		m5();
 		MyApp myApp = new MyApp();
 		myApp.m6();
+	    m7();
 	}
 	
+	public static void m7() {
+		System.out.println("tailleMaxi pour Personne:" + Personne.TAILLE_MAXI);
+		//apres nouvelle statistique , nouvelle tailleMoyenne : 167
+		Personne.setTailleMoyenne(167);
+		System.out.println("tailleMoyenne pour Personne:" + Personne.getTailleMoyenne());
+	}
 	public void m6() {
 		//pythagore
 		double largeur=4;

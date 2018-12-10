@@ -1,11 +1,13 @@
 package com.m2i.tp;
 
 public class Personne {
-	//ajouter deux constantes TAILLE_MINI et TAILLE_MAXI avec les valeurs 0 et 300
+	//ajouter deux constantes public TAILLE_MINI et TAILLE_MAXI avec les valeurs 0 et 300
+	public static final int TAILLE_MINI=0;
+	public static final int TAILLE_MAXI=300;
 	//utiliser ces constantes dans setTaille()
 	//ajouter un attribut statique (variable de classe) tailleMoyenne ou tailleMoyenneDesPersonnes
 	//ayant la valeur par defaut 165 .
-	
+	private static Integer tailleMoyenne=165;
 	//coder et tester des get/set statiques pour tailleMoyenne
 	
 	private String nom;
@@ -13,6 +15,14 @@ public class Personne {
 	private Long numero;
 	private Integer taille = 0; //en cm
 	private Double poids;
+	
+	public static Integer getTailleMoyenne() {
+		return tailleMoyenne;
+	}
+
+	public static void setTailleMoyenne(Integer tailleMoyenne) {
+		Personne.tailleMoyenne = tailleMoyenne;
+	}
 	
     //constructeur avec zéro paramètre (constructeur par defaut)
 	//à programmer quasi systématiquement pour etre sûr qu'il existe
@@ -73,7 +83,7 @@ public class Personne {
 	}
 
 	public void setTaille(Integer taille) {
-		if(taille <0 || taille >300) {
+		if(taille <TAILLE_MINI|| taille >TAILLE_MAXI) {
 			System.out.println("taille invalide non prise en compte");
 			return; //fin (ne pas executer les lignes de code qui suivent dans cette fonction)
 		}
