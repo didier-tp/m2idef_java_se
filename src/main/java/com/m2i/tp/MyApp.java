@@ -3,8 +3,54 @@ package com.m2i.tp;
 public class MyApp {
 	public static void main(String[] args) {
 		//m1(); //appel de m1();
-		m2(); //appel de m2();
-		m3();
+		//m2(); //appel de m2();
+		//m3();
+		m4();
+		m5();
+	}
+	
+	public static void m4() {
+		String ch1="fichier1.json";
+		int posSeparateur;
+		//récupérer dans "posSeparateur" la position du premier "." trouvé dans ch1;
+		posSeparateur = ch1.indexOf(".");
+		String p1,p2;
+		//récupérer dans p1 et p2 les sous parties de ch1 avant et apres le "."
+		p1=ch1.substring(0, posSeparateur);
+		p2=ch1.substring(posSeparateur+1,ch1.length());
+		
+		System.out.println("P1="+p1.toUpperCase());//Afficher p1 en majuscule
+		System.out.println("p2="+p2);
+		String ch2="bordeaux";
+		String ch2Bis; // construire ch2Bis en fonction de ch2
+		               // en transformant le premier caractère en majuscule
+		ch2Bis=ch2.substring(0,1).toUpperCase()+ch2.substring(1,ch2.length());
+		System.out.println("ch2Bis="+ch2Bis);
+	}
+	
+	public static void m5() {
+		//construire un tableau tab de 10 "int"
+		int[] tab = new int[10];
+		//via une boucle , placer i*i comme valeur dans chaque tab[i]
+		for(int i=0;i<tab.length;i++)
+			tab[i]=i*i;
+		//afficher les éléments du tableau tab dans l'ordre inverse
+		for(int i=tab.length - 1; i>=0;i--)
+			System.out.print(tab[i] + " ");
+		
+		String tabChaines[] = { "abc" , "def" , "Ijk" , "suite" , "fin" };
+		//trouver le premier indice d'une chaine commencant par une majuscule
+		String regExpMajusculeAuDebut="[A-Z].*";
+		int i=0;
+		int indice=-1;//valeur par défaut (par convention) si rien de trouver
+		while(i<tabChaines.length) {
+			if(tabChaines[i].matches(regExpMajusculeAuDebut)) {
+				indice=i; break;
+			}
+			i++;
+		}
+		if(indice!=-1)
+			System.out.println("\n indice="+indice + " " + tabChaines[indice]);
 	}
 	
 	public static void m3() {
