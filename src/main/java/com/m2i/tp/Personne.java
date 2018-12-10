@@ -1,10 +1,17 @@
 package com.m2i.tp;
 
 public class Personne {
+	//ajouter deux constantes TAILLE_MINI et TAILLE_MAXI avec les valeurs 0 et 300
+	//utiliser ces constantes dans setTaille()
+	//ajouter un attribut statique (variable de classe) tailleMoyenne ou tailleMoyenneDesPersonnes
+	//ayant la valeur par defaut 165 .
+	
+	//coder et tester des get/set statiques pour tailleMoyenne
+	
 	private String nom;
 	private String prenom;
 	private Long numero;
-	private Integer taille = 0;
+	private Integer taille = 0; //en cm
 	private Double poids;
 	
     //constructeur avec zéro paramètre (constructeur par defaut)
