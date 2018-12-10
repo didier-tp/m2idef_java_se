@@ -27,5 +27,37 @@ public class AvionA380 {
 			//else if , else if ...
 		}
 	}
+	
+	
+
+	public AvionA380() {
+		super();
+	}
+
+	public Integer getNumAvion() {
+		return numAvion;
+	}
+
+	public void setNumAvion(Integer numAvion) {
+		this.numAvion = numAvion;
+	}
+
+	public Integer getNbPers() {
+		return nbPers;
+	}
+
+	public void setNbPers(Integer nbPers) {
+		this.nbPers = nbPers;
+	}
+
+	public Personne[] getTabPersonnes() {
+		return tabPersonnes;
+	}
+
+	public void setTabPersonnes(Personne[] tabPersonnes) {
+		this.tabPersonnes = tabPersonnes;
+	}
+	
+	
 
 }

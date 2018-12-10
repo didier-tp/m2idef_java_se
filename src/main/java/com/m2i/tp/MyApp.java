@@ -11,7 +11,29 @@ public class MyApp {
 		//MyApp myApp = new MyApp();
 		//myApp.m6();
 	    //m7();
-	    m8();
+	    //m8();
+		m9();
+	}
+	
+	public static void m9() {
+	    AvionA380 a1 = new AvionA380();
+	    a1.setNumAvion(1);
+	    
+	    Personne passager0 =  new Personne("Passager" , "clandestin" );
+	    
+	    Employe pilote =  new Employe("Pilote" , "fou en mode automatique" , 3000);
+	    Employe hotesse =  new Employe("Hotesse" , "responsable" , 2000);
+	    
+	    Personne passager1 =  new Personne("Bon" , "jean" );
+	    Personne passager2 =  new Personne("Therieur" , "alex" );
+	    
+	    a1.ajouterPersonne(passager0);
+	    a1.ajouterPersonne(pilote);
+	    a1.ajouterPersonne(hotesse);
+	    a1.ajouterPersonne(passager1);
+	    a1.ajouterPersonne(passager2);
+	    
+	    a1.afficherAvionAvecPersonnes();
 	}
 	
 	public static void m8() {
