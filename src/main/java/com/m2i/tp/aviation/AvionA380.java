@@ -1,4 +1,6 @@
-package com.m2i.tp;
+package com.m2i.tp.aviation;
+
+import com.m2i.tp.Personne;
 
 public class AvionA380 {
 	private Integer numAvion; //null par défaut sur attribut

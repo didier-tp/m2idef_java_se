@@ -1,8 +1,18 @@
 package com.m2i.tp;
 
+import java.util.Date;
+
+import com.m2i.tp.aviation.AvionA380;
+
+
 public class MyApp {
 	
 	public static void main(String[] args) {
+		
+		//java.util.Date d1 = new java.util.Date();
+		Date d1 = new Date();
+		System.out.println("d1="+d1.toString());
+		
 		//m1(); //appel de m1();
 		//m2(); //appel de m2();
 		//m3();
