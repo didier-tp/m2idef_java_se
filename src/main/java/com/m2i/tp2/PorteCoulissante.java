@@ -14,6 +14,15 @@ public class PorteCoulissante extends Porte {
 			   System.out.println("porte coulissante ouverte");
 	}
 
+	@Override
+	public void ouvrir() {
+		faireGlisser(80);
+	}
+
+	@Override
+	public void fermer() {
+		faireGlisser(0);
+	}
 	public String getGlissiere() {
 		return glissiere;
 	}
@@ -30,14 +39,6 @@ public class PorteCoulissante extends Porte {
 		this.translation = translation;
 	}
 
-	@Override
-	public void ouvrir() {
-		faireGlisser(80);
-	}
-
-	@Override
-	public void fermer() {
-		faireGlisser(0);
-	}
+	
 
 }
