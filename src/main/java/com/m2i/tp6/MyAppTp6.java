@@ -28,6 +28,7 @@ public class MyAppTp6 {
 	   }
 	   //ré-afficher la liste , après modifications des éléments référencés
 	   System.out.println("listProduits après modif="+listProduits);
+	   
 	   Comparator<Produit> comparateurPoduitSelonOrdreAlphabetique
 	      = new /* classe anonyme imbriquee qui implemente */ Comparator<Produit>() {
 
