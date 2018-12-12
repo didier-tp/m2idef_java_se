@@ -7,4 +7,5 @@ mvn install
 permet de construire l'application (compilation, test , .jar )
 
 mvn javadoc:javadoc 
+ou bien run as / maven build ... et goal= javadoc:javadoc
 permet de générer la javadoc dans le répertoire target/site/apidocs
