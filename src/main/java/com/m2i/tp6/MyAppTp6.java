@@ -8,8 +8,15 @@ import java.util.List;
 public class MyAppTp6 {
 
 	public static void main(String[] args) {
-		testSimpleAuDebutEtCompliqueAlaFin();
+		//testSimpleAuDebutEtCompliqueAlaFin();
+		testDaoSimu();
+	}
 
+	private static void testDaoSimu() {
+		DaoProduit daoProduitSimu = new DaoProduitSimu();
+		daoProduitSimu.ajouterProduit(new Produit(null,"gomme",2.3));
+		List<Produit> listProduits = daoProduitSimu.rechercherProduits();
+		System.out.println(listProduits.toString());
 	}
 
 	private static void testSimpleAuDebutEtCompliqueAlaFin() {
