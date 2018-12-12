@@ -8,11 +8,11 @@ import java.util.List;
 public class MyAppTp6 {
 
 	public static void main(String[] args) {
-		testSimple();
+		testSimpleAuDebutEtCompliqueAlaFin();
 
 	}
 
-	private static void testSimple() {
+	private static void testSimpleAuDebutEtCompliqueAlaFin() {
 	   List<Produit> listProduits = new ArrayList<Produit>();
 	   listProduits.add(new Produit(1L,"cahier",2.5));
 	   listProduits.add(new Produit(2L,"stylo",1.25));
@@ -28,6 +28,8 @@ public class MyAppTp6 {
 	   }
 	   //ré-afficher la liste , après modifications des éléments référencés
 	   System.out.println("listProduits après modif="+listProduits);
+	   
+	   //Partie compliquée:
 	   
 	   Comparator<Produit> comparateurPoduitSelonOrdreAlphabetique
 	      = new /* classe anonyme imbriquee qui implemente */ Comparator<Produit>() {
