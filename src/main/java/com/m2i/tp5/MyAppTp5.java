@@ -2,15 +2,36 @@ package com.m2i.tp5;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class MyAppTp5 {
 
 	public static void main(String[] args) {
 		testCollection();
 		testCollection2();
+		testCollection3();
+	}
+	
+	public static void testCollection3() {
+		Map<String,Double> mapSaisonTemperature = new HashMap<String,Double>();
+		mapSaisonTemperature.put("hiver", 8.0);
+		mapSaisonTemperature.put("printemps", 14.0);
+		mapSaisonTemperature.put("ete", 19.0);
+		mapSaisonTemperature.put("automne", 12.0);
+		
+		Double tempMoyenneEte = mapSaisonTemperature.get("ete");
+		System.out.println("tempMoyenneEte="+tempMoyenneEte);
+		
+		Set<String> ensembleClefs = mapSaisonTemperature.keySet(); 
+		for(String clef : ensembleClefs) {
+			System.out.println("clef existante="+clef);
+		}
+		
 	}
 	
 	public static void afficherCollection(Collection<? extends Object> c) {
