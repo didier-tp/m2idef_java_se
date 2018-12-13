@@ -9,7 +9,8 @@ public class DaoProduitJdbc implements DaoProduit {
 	public Connection seConnecter() {
 		Connection cn=null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			//Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");//pour V8 de MySql
 			//String dbUrl="jdbc:mysql://localhost/baseprod";
 			String dbUrl="jdbc:mysql://localhost:3306/baseprod?serverTimezone=UTC";
 			cn=DriverManager.getConnection(dbUrl, "root", "");
