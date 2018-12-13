@@ -68,13 +68,15 @@ public class DaoProduitJdbc implements DaoProduit {
 					/*"INSERT INTO produit(numero,label,prix) VALUES("
 						  + p.getNumero() + ",'" + p.getLabel()+"',"
 						  + p.getPrix()+")";pas bien*/
-				    "INSERT INTO produit(numero,label,prix) VALUES(?,?,?)";
-			PreparedStatement pst = cn.prepareStatement(reqSql);
-			pst.setLong(1, p.getNumero());//1,2 et 3 sont les positions
-			pst.setString(2, p.getLabel());//des ? dans la requête
-			pst.setDouble(3, p.getPrix()); // à remplacer par des valeurs
+				    "INSERT INTO produit(label,prix) VALUES(?,?)";
+			PreparedStatement pst = cn.prepareStatement(reqSql,
+					                      Statement.RETURN_GENERATED_KEYS);
+			//pst.setLong(1, p.getNumero());//1,2 et 3 sont les positions
+			pst.setString(1, p.getLabel());//des ? dans la requête
+			pst.setDouble(2, p.getPrix()); // à remplacer par des valeurs
 			pst.executeUpdate();
-			pst.close();//fermetures dans l'ordre inverse des ouvertures
+			p.setNumero(getAutoIncrPk(pst));//nécessite auto_increment (mysql)
+			pst.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
