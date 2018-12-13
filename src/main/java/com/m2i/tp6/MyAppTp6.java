@@ -15,8 +15,12 @@ public class MyAppTp6 {
 	}
 	private static void testDaoJdbc() {
 		DaoProduitJdbc daoProduitJdbc = new DaoProduitJdbc();
-		Connection cn =daoProduitJdbc.seConnecter();
-		System.out.println("connexion etablie="+cn.toString());
+		//Connection cn =daoProduitJdbc.seConnecter();
+		//System.out.println("connexion etablie="+cn.toString());
+		List<Produit> listeProd = daoProduitJdbc.rechercherProduits();
+		for(Produit p : listeProd) {
+			System.out.println(p.toString());
+		}
 	}
 
 	private static void testDaoSimu() {
