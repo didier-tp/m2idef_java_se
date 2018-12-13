@@ -1,5 +1,6 @@
 package com.m2i.tp6;
 
+import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,12 +14,28 @@ public class MyAppTp6 {
 	public static void main(String[] args) {
 		//testSimpleAuDebutEtCompliqueAlaFin();
 		//testDaoSimu();
-		testDaoJdbc();
-		testDaoCsvFile();
-		testDate();
+		//testDaoJdbc();
+		//testDaoCsvFile();
+		//testDate();
+		testIntropsection();
 	}
 	
 	
+	private static void testIntropsection() {
+		String nomClasseJava="com.m2i.tp6.Produit";//"java.util.Date";
+		
+		try {
+			Class c = Class.forName(nomClasseJava);
+			
+			for(Field f : c.getDeclaredFields()) {
+				System.out.println(f.getName() + " : " + f.getType().getSimpleName());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
+
+
 	private static void testDate() {
 		Date d1 = new Date();//date et heure courante.
 		DateFormat dateFormat = SimpleDateFormat.getDateTimeInstance();
