@@ -47,19 +47,30 @@ public class DaoProduitJdbc implements DaoProduit {
 		return listeProduits;
 	}
 	
-	//fonction utilitaire/réutilisable de fermeture cachant le try/catch obligatoire
-	public static void closeCn(Connection cn) {
-		try {
-			cn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
+	
 	
 	public void ajouterProduit(Produit p) {
-		// TODO Auto-generated method stub
-
+		Connection cn = seConnecter();
+		try {  
+			  Statement st = cn.createStatement();
+			  String reqSql = 
+			    "INSERT INTO produit(numero,label,prix) VALUES(?,?,?)";
+			  st.executeUpdate(reqSql);
+			st.close();//fermetures dans l'ordre inverse des ouvertures
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			closeCn(cn);
+		}
 	}
+	
+	//fonction utilitaire/réutilisable de fermeture cachant le try/catch obligatoire
+		public static void closeCn(Connection cn) {
+			try {
+				cn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 
 }
