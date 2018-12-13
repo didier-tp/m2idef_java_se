@@ -1,5 +1,6 @@
 package com.m2i.tp6;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,7 +10,13 @@ public class MyAppTp6 {
 
 	public static void main(String[] args) {
 		//testSimpleAuDebutEtCompliqueAlaFin();
-		testDaoSimu();
+		//testDaoSimu();
+		testDaoJdbc();
+	}
+	private static void testDaoJdbc() {
+		DaoProduitJdbc daoProduitJdbc = new DaoProduitJdbc();
+		Connection cn =daoProduitJdbc.seConnecter();
+		System.out.println("connexion etablie="+cn.toString());
 	}
 
 	private static void testDaoSimu() {
