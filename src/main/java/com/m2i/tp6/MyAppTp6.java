@@ -17,6 +17,9 @@ public class MyAppTp6 {
 		DaoProduitJdbc daoProduitJdbc = new DaoProduitJdbc();
 		//Connection cn =daoProduitJdbc.seConnecter();
 		//System.out.println("connexion etablie="+cn.toString());
+		Produit nouveauProduit = new Produit(5L,"produit5",5.55555);
+		daoProduitJdbc.ajouterProduit(nouveauProduit);
+		
 		List<Produit> listeProd = daoProduitJdbc.rechercherProduits();
 		for(Produit p : listeProd) {
 			System.out.println(p.toString());

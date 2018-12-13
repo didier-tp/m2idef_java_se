@@ -48,7 +48,18 @@ public class DaoProduitJdbc implements DaoProduit {
 		return listeProduits;
 	}
 	
-	
+	public static Long getAutoIncrPk(Statement st) {
+		Long pk=null;
+		try {
+			ResultSet rsKeys = st.getGeneratedKeys();
+			if(rsKeys.next())
+				pk = rsKeys.getLong(1);
+			rsKeys.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return pk;
+	}
 	
 	public void ajouterProduit(Produit p) {
 		Connection cn = seConnecter();
