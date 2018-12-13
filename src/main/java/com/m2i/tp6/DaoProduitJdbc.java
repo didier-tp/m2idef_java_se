@@ -2,6 +2,7 @@ package com.m2i.tp6;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -52,11 +53,17 @@ public class DaoProduitJdbc implements DaoProduit {
 	public void ajouterProduit(Produit p) {
 		Connection cn = seConnecter();
 		try {  
-			  Statement st = cn.createStatement();
-			  String reqSql = 
-			    "INSERT INTO produit(numero,label,prix) VALUES(?,?,?)";
-			  st.executeUpdate(reqSql);
-			st.close();//fermetures dans l'ordre inverse des ouvertures
+			String reqSql = 
+					/*"INSERT INTO produit(numero,label,prix) VALUES("
+						  + p.getNumero() + ",'" + p.getLabel()+"',"
+						  + p.getPrix()+")";pas bien*/
+				    "INSERT INTO produit(numero,label,prix) VALUES(?,?,?)";
+			PreparedStatement pst = cn.prepareStatement(reqSql);
+			pst.setLong(1, p.getNumero());//1,2 et 3 sont les positions
+			pst.setString(2, p.getLabel());//des ? dans la requête
+			pst.setDouble(3, p.getPrix()); // à remplacer par des valeurs
+			pst.executeUpdate();
+			pst.close();//fermetures dans l'ordre inverse des ouvertures
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
