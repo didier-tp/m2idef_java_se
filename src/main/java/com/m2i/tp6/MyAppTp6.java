@@ -1,9 +1,11 @@
 package com.m2i.tp6;
 
-import java.sql.Connection;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 public class MyAppTp6 {
@@ -13,7 +15,22 @@ public class MyAppTp6 {
 		//testDaoSimu();
 		testDaoJdbc();
 		testDaoCsvFile();
+		testDate();
 	}
+	
+	
+	private static void testDate() {
+		Date d1 = new Date();//date et heure courante.
+		DateFormat dateFormat = SimpleDateFormat.getDateTimeInstance();
+		DateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
+
+		String chDate = dateFormat.format(d1);
+		System.out.println("date="+chDate);
+		
+		System.out.println("date="+dateFormat2.format(d1));
+	}
+
+
 	private static void testDaoCsvFile() {
 		System.out.println("---------");
 		DaoProduitCsvFile daoProduitCsvFile = new DaoProduitCsvFile();
